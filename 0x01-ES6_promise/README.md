@@ -1,8 +1,5 @@
 # 0x01. ES6 Promises
 
-> ## Excerpt
-> 
-
 ---
 ![](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/12/75862d67ca51a042003c.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20240102%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240102T214737Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=5dca6f687126ca3ff11216917db9a6a03bc7bfdb89c0e41ab2e839c26db03497)
 
@@ -200,8 +197,6 @@ Donâ€™t forget to run `$ npm install` when you have the `package.json`
 
 ### 0\. Keep every promise you make and only make promises you can keep
 
-mandatory
-
 Return a Promise using this prototype `function getResponseFromAPI()`
 
 ```
@@ -224,8 +219,6 @@ bob@dylan:~$
 -   File: `0-promise.js`
 
 ### 1\. Don't make a promise...if you know you can't keep it
-
-mandatory
 
 Using the prototype below, return a `promise`. The parameter is a `boolean`.
 
@@ -269,8 +262,6 @@ bob@dylan:~$
 
 ### 2\. Catch me if you can!
 
-mandatory
-
 Using the function prototype below
 
 ```
@@ -306,8 +297,6 @@ bob@dylan:~$
 
 ### 3\. Handle multiple successful promises
 
-mandatory
-
 In this file, import `uploadPhoto` and `createUser` from `utils.js`
 
 Knowing that the functions in `utils.js` return promises, use the prototype below to collectively resolve all promises and log `body firstName lastName` to the console.
@@ -337,8 +326,6 @@ bob@dylan:~$
 -   File: `3-all.js`
 
 ### 4\. Simple promise
-
-mandatory
 
 Using the following prototype
 
@@ -376,8 +363,6 @@ bob@dylan:~$
 
 ### 5\. Reject the promises
 
-mandatory
-
 Write and export a function named `uploadPhoto`. It should accept one argument `fileName` (string).
 
 The function should return a Promise rejecting with an Error and the string `$fileName cannot be processed`
@@ -410,8 +395,6 @@ bob@dylan:~$
 -   File: `5-photo-reject.js`
 
 ### 6\. Handle multiple promises
-
-mandatory
 
 Import `signUpUser` from `4-user-promise.js` and `uploadPhoto` from `5-photo-reject.js`.
 
@@ -446,8 +429,6 @@ bob@dylan:~$
 -   File: `6-final-user.js`
 
 ### 7\. Load balancer
-
-mandatory
 
 Write and export a function named `loadBalancer`. It should accept two arguments `chinaDownload` (Promise) and `USDownload` (Promise).
 
@@ -500,8 +481,6 @@ bob@dylan:~$
 
 ### 8\. Throw error / try catch
 
-mandatory
-
 Write a function named `divideFunction` that will accept two arguments: `numerator` (Number) and `denominator` (Number).
 
 When the `denominator` argument is equal to 0, the function should throw a new error with the message `cannot divide by 0`. Otherwise it should return the numerator divided by the denominator.
@@ -537,8 +516,6 @@ bob@dylan:~$
 -   File: `8-try.js`
 
 ### 9\. Throw an error
-
-mandatory
 
 Write a function named `guardrail` that will accept one argument `mathFunction` (Function).
 
