@@ -1,8 +1,7 @@
 export default function cleanSet(set, str) {
-  if (str === '') return '';
-  const newSet = [];
-  set.forEach((item) => {
-    if (item.includes(str)) newSet.push(item.replace(str, ''));
-  });
-  return newSet.join('-');
+  if (str === undefined || str.length === 0) return '';
+  return [...set]
+    .filter((val) => (val ? val.startsWith(str) : ''))
+    .map((val) => (val ? val.slice(str.length) : ''))
+    .join('-');
 }
