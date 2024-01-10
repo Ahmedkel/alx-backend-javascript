@@ -1,23 +1,44 @@
-interface Teacher {
-    firstName: string;
-    lastName: string;
+  export interface Teacher {
+    readonly firstName: string;
+    readonly lastName: string;
     fullTimeEmployee: boolean;
     yearsOfExperience?: number;
     location: string;
-    [key: string]: any;
-   }
-
-   interface Directors extends Teacher {
+    [propName: string]: any;
+  }
+  
+  export interface Directors extends Teacher {
     numberOfReports: number;
-   }
-
-   const teacher3: Teacher = {
-    firstName: 'Mol',
-    fullTimeEmployee: true,
-    lastName: '7alawiyat',
-    location: 'MAROC',
-    numberOfReports: 18,
-   };
-   
-   console.log(teacher3);
- 
+  }
+  
+  interface PrintTeacherFunction {
+    (firstName: string, lastName: string): string;
+  }
+  
+  export const printTeacher: PrintTeacherFunction = (firstName='Mol', lastName='7alawiyat') => {
+    return `${firstName[0].toUpperCase()}. ${lastName}`;
+  };
+  
+  interface StudentClassInterface {
+    workOnHomework(): string;
+    displayName(): string;
+  }
+  
+  export interface StudentConstructor {
+    new (firstName: string, lastName: string): StudentClassInterface;
+  }
+  
+  class StudentClass implements StudentClassInterface {
+    _firstName: string;
+    _lastName: string;
+    constructor(firstName: string, lastName: string) {
+      this._firstName = firstName;
+      this._lastName = lastName;
+    }
+    workOnHomework(): string {
+      return `Currently working`;
+    }
+    displayName(): string {
+      return this._firstName;
+    }
+  }
